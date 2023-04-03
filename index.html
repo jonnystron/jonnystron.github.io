@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alcoólico do Amor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1a6rXK6E9w6U0iXT1QedFgBkP" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Nunito?category=Sans+Serif&preview.text=Fique%20por%20dentro!&preview.text_type=custom">
+    <style>
+
+      *{
+      padding: 0px;
+      margin: 0px
+    }
+      body { 
+        background-image: url('./background-2.png');
+        background-size: 30%;
+        background-repeat: repeat;
+        background-position: center center;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+       align-items: center;
+        height: 100vh;
+       margin: 0;
+      }
+
+      .wrapper {
+       max-width: 960px; /* largura máxima do conteúdo */
+       width: 100%; /* definir a largura do elemento */
+       padding: 0 10px; /* adicionar padding para evitar que o conteúdo fique grudado nas bordas */
+      }
+      
+      .logo {
+        display: block;
+        margin: 0 auto 0px;
+        max-width: 250px;
+        animation: flutuar 2s ease-in-out infinite;
+      }
+
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+        color: #ffffff;
+        animation: fadeIn 3s forwards;
+      }
+
+      h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 50px;
+        font-style: italic;
+        font-weight: bold;
+        color: #ffffff;
+        animation: fadeIn 4s forwards;
+      }
+
+      h3 {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #ffffff;
+        animation: fadeIn 4s forwards;
+        font-family: 'Nunito', sans-serif;
+      }
+
+      .btn {
+        background-color: #3abbd9;
+        border-color: #3abbd9;
+        font-size: 1.1em;
+        padding: 12px 24px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 50px;
+        color: #ffffff;
+        transition: all 0.1s ease;
+        animation: fadeIn 1s forwards;
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        width: 300px; height: 20px;
+      }
+
+      .btn:hover {
+        background-color: #f02121;
+        color: #ffffff;
+        border-color: #f02124;
+      }
+
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+        75% {
+          transform: translateX(-5px);
+        }        
+    }
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/** Botão que exclui dali de baixo: 
+
+
+      <a href="btn" class="btn btn-lg">Fique por dentro das novidades!</a>
+
+*/
+
+</style>
+        <body>
+    <div class="container">
+      <img class="logo" src="./logo.png" alt="Alcoólico do Amor" />
+
+      <h1>Apaixone-se a cada gole! 💕</h1>
+
+      <h2>A mesma qualidade, só que de cara nova!
+      </h2>
+
+      <h3>Em breve novo site!</h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide('.glide').mount()
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('a[href^="#"]').on('click', function (event) {
+          var target = $(this.getAttribute('href'))
+          if (target.length) {
+            event.preventDefault()
+            $('html, body').stop().animate({
+              scrollTop: target.offset().top,
+            }, 1000)
+          }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('.scroll-top').fadeIn();
+          } else {
+            $('.scroll-top').fadeOut();
+          }
+        });
+
+        $('.scroll-top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 600);
+          return false;
+        });
+      });
+    </script>
+  </body>
